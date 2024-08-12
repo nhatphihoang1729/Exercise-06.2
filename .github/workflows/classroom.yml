@@ -1,0 +1,142 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: UT
+      id: ut
+      uses: classroom-resources/autograding-python-grader@v1
+      with:
+        timeout: 10
+        max-score: 9
+        setup-command: ''
+    - name: IO 1
+      id: io-1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: IO 1
+        setup-command: ''
+        command: python3 main.py
+        input: '60'
+        expected-output: |-
+          T-60 Seconds
+          T-30 Seconds
+          T-15 Seconds
+          10
+          9
+          8
+          7
+          6
+          5
+          Four stage engine start.
+          3
+          2
+          1
+          0
+          Booster Ignition
+          and lift off of Artemis I.
+          We rise together to the moon and beyond!
+        comparison-method: contains
+        timeout: 10
+        max-score: 1
+    - name: IO 2
+      id: io-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: IO 2
+        setup-command: ''
+        command: python3 main.py
+        input: '30'
+        expected-output: |-
+          T-30 Seconds
+          T-15 Seconds
+          10
+          9
+          8
+          7
+          6
+          5
+          Four stage engine start.
+          3
+          2
+          1
+          0
+          Booster Ignition
+          and lift off of Artemis I.
+          We rise together to the moon and beyond!
+        comparison-method: contains
+        timeout: 10
+        max-score: 1
+    - name: IO 3
+      id: io-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: IO 3
+        setup-command: ''
+        command: python3 main.py
+        input: '15'
+        expected-output: |-
+          T-15 Seconds
+          10
+          9
+          8
+          7
+          6
+          5
+          Four stage engine start.
+          3
+          2
+          1
+          0
+          Booster Ignition
+          and lift off of Artemis I.
+          We rise together to the moon and beyond!
+        comparison-method: contains
+        timeout: 10
+        max-score: 1
+    - name: IO 4
+      id: io-4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: IO 4
+        setup-command: ''
+        command: python3 main.py
+        input: '10'
+        expected-output: |-
+          10
+          9
+          8
+          7
+          6
+          5
+          Four stage engine start.
+          3
+          2
+          1
+          0
+          Booster Ignition
+          and lift off of Artemis I.
+          We rise together to the moon and beyond!
+        comparison-method: contains
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        UT_RESULTS: "${{steps.ut.outputs.result}}"
+        IO-1_RESULTS: "${{steps.io-1.outputs.result}}"
+        IO-2_RESULTS: "${{steps.io-2.outputs.result}}"
+        IO-3_RESULTS: "${{steps.io-3.outputs.result}}"
+        IO-4_RESULTS: "${{steps.io-4.outputs.result}}"
+      with:
+        runners: ut,io-1,io-2,io-3,io-4
