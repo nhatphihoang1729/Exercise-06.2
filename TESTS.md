@@ -12,7 +12,7 @@ Before you submit your assignment to GitHub, make sure you run the two example t
 
 Note, your install may differ so you may need to research how to execute your manual python command for your computer.
 
-### Example Case 1 (7pt)
+### Example Case 1 (0.25pt)
 
 **Case 1 Input**
 
@@ -42,7 +42,7 @@ and lift off of Artemis I.
 We rise together to the moon and beyond!
 ```
 
-### Example Case 2 (7pt)
+### Example Case 2 (0.25pt)
 
 **Case 2 Input**
 
@@ -71,7 +71,7 @@ and lift off of Artemis I.
 We rise together to the moon and beyond!
 ```
 
-### Example Case 3 (7pt)
+### Example Case 3 (0.25pt)
 
 **Case 3 Input**
 
@@ -99,7 +99,7 @@ and lift off of Artemis I.
 We rise together to the moon and beyond!
 ```
 
-### Example Case 4 (7pt)
+### Example Case 4 (0.25pt)
 
 **Case 4 Input**
 

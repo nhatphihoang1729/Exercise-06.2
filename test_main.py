@@ -32,14 +32,14 @@ def run_main_program():
 
 
 def test_case1():
-    "Case 1: Tests the T-Minus Messages (4pt)"
+    "Case 1: Tests the T-Minus Messages (0.5pt)"
 
     assert m.countdown(-60) == "T-60 Seconds"
     assert m.countdown(-30) == "T-30 Seconds"
     assert m.countdown(-15) == "T-15 Seconds"
 
 def test_case2():
-    "Case 2: Test the Seconds where None is returned (4pt)"
+    "Case 2: Test the Seconds where None is returned (0.75pt)"
 
     # Between -80 and -61 Seconds
     for x in range(-80,-60):
@@ -58,7 +58,7 @@ def test_case2():
         assert m.countdown(x) == None
 
 def test_case3():
-    "Case 3: Tests the last 10 Seconds of the Count (4pt)"
+    "Case 3: Tests the last 10 Seconds of the Count (1pt)"
 
     for x in range(-10,0):
         if x != -4:
@@ -67,24 +67,24 @@ def test_case3():
             assert m.countdown(x) == "Four stage engine start."
 
 def test_case4():
-    "Case 4: Tests count at ignition (4pt)"
+    "Case 4: Tests count at ignition (0.5pt)"
 
     assert m.countdown(0) == "0\nBooster Ignition\nand lift off of Artemis I."    
 
 def test_case5():
-    "Case 5: Test Last Message (4pt)"
+    "Case 5: Test Last Message (0.75pt)"
 
     assert m.countdown(2) == "We rise together to the moon and beyond!"
 
 def test_case6():
-    "Case 6: Test the Seconds where None is returned After Launch (4pt)"
+    "Case 6: Test the Seconds where None is returned After Launch (1pt)"
 
     assert m.countdown(1) == None
     for x in range(3,10):
         assert m.countdown(x) == None
 
 def test_case7():
-    "Case 7: Test for Input with Random Seconds between 10-60 (8pt)"
+    "Case 7: Test for Input with Random Seconds between 10-60 (1.5pt)"
 
     global value_input, value_actual
     value_possible = [
