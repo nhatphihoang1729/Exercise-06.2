@@ -3,7 +3,7 @@
 ## Student Information
 
 * Nhat Phi Hoang
-* Spring/2026
+* Spring/2026.
 * 37239
 
 ## Instructions
