@@ -2,9 +2,9 @@
 
 ## Student Information
 
-* Name
-* Semester/Year
-* CRN
+* Nhat Phi Hoang
+* Spring/2026
+* 37239
 
 ## Instructions
 
@@ -68,10 +68,10 @@ Do not provide code for any of the questions. Delete the text that says *YOUR AN
 
 **What are the advantages of returning a value rather than printing it from the function?**
 
-YOUR ANSWER HERE
+Returning a value is more flexible way of handling data compared to printing it. The program can then print, save, or use the returned value in condition.
 
 ### Question 2
 
 **What do you think is the reason a single value evaluated by the countdown() function then returned rather than using a loop inside of the countdown() function?**
 
-YOUR ANSWER HERE
+I think the reason the function returns a single value rather than looping is because it is designed to owrk on one input at a time. The main function contrains the loop so it has the power to decide the numbers of repeats of the function. This keeps the function simple and focused, while the main program handles over and over.
