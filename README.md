@@ -68,7 +68,7 @@ Do not provide code for any of the questions. Delete the text that says *YOUR AN
 
 **What are the advantages of returning a value rather than printing it from the function?**
 
-Returning a value is more flexible way of handling data compared to printing it. The program can then print, save, or use the returned value in condition.
+The advantages of returning a value is more flexible way of handling data compared to printing it. The program can then print, save, or use the returned value in condition.
 
 ### Question 2
 
